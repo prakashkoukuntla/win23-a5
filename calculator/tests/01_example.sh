@@ -29,3 +29,21 @@ if $CALCULATOR 3 @ 2; then  # If the return code of $PROGRAM is zero (i.e. succe
   echo 'ERROR! An invalid run of the application (3 @ 2) apparently succeeded?!'
   exit 1
 fi
+
+# Test 04: Subtraction
+if [[ $($CALCULATOR 11 - 3) -ne 8 ]]; then
+  echo 'ERROR! 11 - 3 did not produce 8!'
+  exit 1
+fi
+
+# Test 05: Multiplication
+if [[ $($CALCULATOR 2 '*' 2) -ne 4 ]]; then
+  echo 'ERROR! 2 * 2 did not produce 4!'
+  exit 1
+fi
+
+# Test 06: Division
+if [[ $($CALCULATOR 20 / 4) -ne 5 ]]; then
+  echo 'ERROR! 20 / 4 did not produce 5!'
+  exit 1
+fi
